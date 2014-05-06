@@ -50,7 +50,7 @@ $(function() {
 
         // queue the shoot
         setTimeout(function() {
-            //$.ajax({method: 'post', url: '/shoot'});
+            $.ajax({method: 'post', url: '/shoot'});
         }, t - 4000);
 
         setTimeout(shoot, t);
@@ -118,6 +118,9 @@ $(function() {
 
     });
 
+    $(document.body).on('keyup', function() {
+        $.ajax({method: 'post', url: '/shoot'});
+    });        
     
 });
 
