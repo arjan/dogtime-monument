@@ -11,9 +11,14 @@ class ShootHandler(tornado.web.RequestHandler):
         self.serial = serial.Serial(ARDUINO, baudrate=19200)
         
     def post(self):
-        print "Shooting a ball."
-        self.serial.write("\x01")
+        if self.request.headers['host'][:9] == "localhost":
+            print "Shooting a ball."
+            self.serial.write("\x01")
+            self.serial.flush()
+        else:
+            print "Ignoring external ball shoot from", self.request.headers['host']
         self.write("OK")
+            
 
 
 class Application(tornado.web.Application):
@@ -22,14 +27,14 @@ class Application(tornado.web.Application):
             (r"/shoot", ShootHandler),
             (r'/(.*)', tornado.web.StaticFileHandler, {'path': os.path.dirname(__file__) + "/public"}),
             ]
-        super(Application, self).__init__(routes)
+        super(Application, self).__init__(routes, debug=True)
         self.listen(8888)
 
-
+        
 if __name__ == "__main__":
-
     application = Application()
     ioloop = tornado.ioloop.IOLoop.instance()
     ioloop.start()
+
 
 
