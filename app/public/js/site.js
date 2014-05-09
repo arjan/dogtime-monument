@@ -62,7 +62,7 @@ $(function() {
             ["Jannemieke Oostra", "bk"],
             ["Jordy Wit", "bk"],
             ["Jurjan de Vries", "idum"],
-            ["Lenka Dittrichová", "idum"],
+            ["Lenka Dittrichova", "idum"],
             ["Maarten van der Heijden", "bk"],
             ["Marie-Jose van der Klugt", "bk"],
             ["Mieke Teelen", "bk"],
@@ -83,7 +83,7 @@ $(function() {
             ["Anne-Marie van Meel", "bk"],
             ["Bertha Graciela Acosta", "bk"],
             ["Cym", "idum"],
-            ["Daniël de Zeeuw", "idum"],
+            ["Daniel de Zeeuw", "idum"],
             ["Douwe Mulder", "bk"],
             ["Femke Egas", "bk"],
             ["Jane Wang", "bk"],
@@ -100,10 +100,10 @@ $(function() {
             ["Nicoline Timmer", "bk"],
             ["Osira Verspyck", "bk"],
             ["Patrice Aaftink", "bk"],
-            ["René Bosch", "bk"],
+            ["Rene Bosch", "bk"],
             ["Robbert Weide", "bk"],
             ["Simone van Groenestijn", "idum"],
-            ["Sébastien Goy", "bk"],
+            ["Sebastien Goy", "bk"],
             ["Tatjana Leutar", "bk"]
         ],
 
@@ -123,7 +123,7 @@ $(function() {
             ["Marlon van der Pas", "idum"],
             ["Muhabbat Huiskamp", "bk"],
             ["Paula Stam", "bk"],
-            ["Péter Jánosi", "bk"],
+            ["Peter Janosi", "bk"],
             ["Tanya Keppel Hesselink", "bk"],
             ["Teresa van Twuijver", "bk"]
         ],
@@ -152,8 +152,6 @@ $(function() {
             ["Vera Visser", "bk"]
         ]
     ];
-
-    console.log(1);
 
     var container = $(document.body);
 
